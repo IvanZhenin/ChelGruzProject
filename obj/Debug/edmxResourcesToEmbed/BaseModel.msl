@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ChelGruzModelContainer" CdmEntityContainer="ChelGruzEntities">
+    <EntitySetMapping Name="Clienti">
+      <EntityTypeMapping TypeName="ChelGruzModel.Clienti">
+        <MappingFragment StoreEntitySet="Clienti">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="ThirdName" ColumnName="ThirdName" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Otcheti">
+      <EntityTypeMapping TypeName="ChelGruzModel.Otcheti">
+        <MappingFragment StoreEntitySet="Otcheti">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodeZakaza" ColumnName="CodeZakaza" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sotrudniki">
+      <EntityTypeMapping TypeName="ChelGruzModel.Sotrudniki">
+        <MappingFragment StoreEntitySet="Sotrudniki">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="ThirdName" ColumnName="ThirdName" />
+          <ScalarProperty Name="Doljnost" ColumnName="Doljnost" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Parol" ColumnName="Parol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarifi">
+      <EntityTypeMapping TypeName="ChelGruzModel.Tarifi">
+        <MappingFragment StoreEntitySet="Tarifi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TypeAuto" ColumnName="TypeAuto" />
+          <ScalarProperty Name="PriceKm" ColumnName="PriceKm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zakazi">
+      <EntityTypeMapping TypeName="ChelGruzModel.Zakazi">
+        <MappingFragment StoreEntitySet="Zakazi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodeSotrudnika" ColumnName="CodeSotrudnika" />
+          <ScalarProperty Name="CodeClienta" ColumnName="CodeClienta" />
+          <ScalarProperty Name="CodeTarifa" ColumnName="CodeTarifa" />
+          <ScalarProperty Name="Tovar" ColumnName="Tovar" />
+          <ScalarProperty Name="KolvoTovara" ColumnName="KolvoTovara" />
+          <ScalarProperty Name="AdressDostavki" ColumnName="AdressDostavki" />
+          <ScalarProperty Name="DistanceKm" ColumnName="DistanceKm" />
+          <ScalarProperty Name="DateAd" ColumnName="DateAd" />
+          <ScalarProperty Name="DateKon" ColumnName="DateKon" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ItogSum" ColumnName="ItogSum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

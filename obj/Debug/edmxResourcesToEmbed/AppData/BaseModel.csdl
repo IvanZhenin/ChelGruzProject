@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChelGruzModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SecondName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThirdName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telephone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Clients" FromRole="Clients" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumWorker" Type="Int32" Nullable="false" />
+    <Property Name="NumClient" Type="Int32" Nullable="false" />
+    <Property Name="NumRate" Type="Int32" Nullable="false" />
+    <Property Name="AddressDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DistanceKm" Type="Double" Nullable="false" />
+    <Property Name="DateStart" Type="DateTime" Precision="0" />
+    <Property Name="DateEnd" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_Orders_Clients" FromRole="Orders" ToRole="Clients" />
+    <NavigationProperty Name="Rates" Relationship="Self.FK_Orders_Rates" FromRole="Orders" ToRole="Rates" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK_Orders_Workers" FromRole="Orders" ToRole="Workers" />
+    <NavigationProperty Name="ProdInOrders" Relationship="Self.FK_ProdInOrders_Orders" FromRole="Orders" ToRole="ProdInOrders" />
+  </EntityType>
+  <EntityType Name="ProdInOrders">
+    <Key>
+      <PropertyRef Name="NumOrder" />
+      <PropertyRef Name="NumProd" />
+    </Key>
+    <Property Name="NumOrder" Type="Int32" Nullable="false" />
+    <Property Name="NumProd" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_ProdInOrders_Orders" FromRole="ProdInOrders" ToRole="Orders" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_ProdInOrders_Products" FromRole="ProdInOrders" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PriceOne" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="ProdInOrders" Relationship="Self.FK_ProdInOrders_Products" FromRole="Products" ToRole="ProdInOrders" />
+  </EntityType>
+  <EntityType Name="Rates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TypeCar" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PriceKm" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Rates" FromRole="Rates" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SecondName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThirdName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Workers" FromRole="Workers" ToRole="Orders" />
+  </EntityType>
+  <Association Name="FK_Orders_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="NumClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Rates">
+    <End Role="Rates" Type="Self.Rates" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rates">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="NumRate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Workers">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="NumWorker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProdInOrders_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="ProdInOrders" Type="Self.ProdInOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProdInOrders">
+        <PropertyRef Name="NumOrder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProdInOrders_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="ProdInOrders" Type="Self.ProdInOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProdInOrders">
+        <PropertyRef Name="NumProd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ChelGruzEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="ProdInOrders" EntityType="Self.ProdInOrders" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="Rates" EntityType="Self.Rates" />
+    <EntitySet Name="Workers" EntityType="Self.Workers" />
+    <AssociationSet Name="FK_Orders_Clients" Association="Self.FK_Orders_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Rates" Association="Self.FK_Orders_Rates">
+      <End Role="Rates" EntitySet="Rates" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Workers" Association="Self.FK_Orders_Workers">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProdInOrders_Orders" Association="Self.FK_ProdInOrders_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="ProdInOrders" EntitySet="ProdInOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProdInOrders_Products" Association="Self.FK_ProdInOrders_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProdInOrders" EntitySet="ProdInOrders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

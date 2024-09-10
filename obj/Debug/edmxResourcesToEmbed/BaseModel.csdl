@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChelGruzModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clienti">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SecondName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThirdName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Zakazi" Relationship="Self.FK_Zakazi_Clienti" FromRole="Clienti" ToRole="Zakazi" />
+  </EntityType>
+  <EntityType Name="Otcheti">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeZakaza" Type="Int32" Nullable="false" />
+    <Property Name="Information" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Zakazi" Relationship="Self.FK_Otcheti_Zakazi" FromRole="Otcheti" ToRole="Zakazi" />
+  </EntityType>
+  <EntityType Name="Sotrudniki">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SecondName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThirdName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Doljnost" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Parol" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Zakazi" Relationship="Self.FK_Zakazi_Sotrudniki" FromRole="Sotrudniki" ToRole="Zakazi" />
+  </EntityType>
+  <EntityType Name="Tarifi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TypeAuto" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PriceKm" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="Zakazi" Relationship="Self.FK_Zakazi_Tarifi" FromRole="Tarifi" ToRole="Zakazi" />
+  </EntityType>
+  <EntityType Name="Zakazi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeSotrudnika" Type="Int32" Nullable="false" />
+    <Property Name="CodeClienta" Type="Int32" Nullable="false" />
+    <Property Name="CodeTarifa" Type="Int32" Nullable="false" />
+    <Property Name="Tovar" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KolvoTovara" Type="Int32" Nullable="false" />
+    <Property Name="AdressDostavki" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DistanceKm" Type="Int32" Nullable="false" />
+    <Property Name="DateAd" Type="DateTime" Precision="0" />
+    <Property Name="DateKon" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ItogSum" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Clienti" Relationship="Self.FK_Zakazi_Clienti" FromRole="Zakazi" ToRole="Clienti" />
+    <NavigationProperty Name="Otcheti" Relationship="Self.FK_Otcheti_Zakazi" FromRole="Zakazi" ToRole="Otcheti" />
+    <NavigationProperty Name="Sotrudniki" Relationship="Self.FK_Zakazi_Sotrudniki" FromRole="Zakazi" ToRole="Sotrudniki" />
+    <NavigationProperty Name="Tarifi" Relationship="Self.FK_Zakazi_Tarifi" FromRole="Zakazi" ToRole="Tarifi" />
+  </EntityType>
+  <Association Name="FK_Zakazi_Clienti">
+    <End Role="Clienti" Type="Self.Clienti" Multiplicity="1" />
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clienti">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Zakazi">
+        <PropertyRef Name="CodeClienta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Otcheti_Zakazi">
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="1" />
+    <End Role="Otcheti" Type="Self.Otcheti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zakazi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Otcheti">
+        <PropertyRef Name="CodeZakaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zakazi_Sotrudniki">
+    <End Role="Sotrudniki" Type="Self.Sotrudniki" Multiplicity="1" />
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudniki">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Zakazi">
+        <PropertyRef Name="CodeSotrudnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zakazi_Tarifi">
+    <End Role="Tarifi" Type="Self.Tarifi" Multiplicity="1" />
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tarifi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Zakazi">
+        <PropertyRef Name="CodeTarifa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ChelGruzEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clienti" EntityType="Self.Clienti" />
+    <EntitySet Name="Otcheti" EntityType="Self.Otcheti" />
+    <EntitySet Name="Sotrudniki" EntityType="Self.Sotrudniki" />
+    <EntitySet Name="Tarifi" EntityType="Self.Tarifi" />
+    <EntitySet Name="Zakazi" EntityType="Self.Zakazi" />
+    <AssociationSet Name="FK_Zakazi_Clienti" Association="Self.FK_Zakazi_Clienti">
+      <End Role="Clienti" EntitySet="Clienti" />
+      <End Role="Zakazi" EntitySet="Zakazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Otcheti_Zakazi" Association="Self.FK_Otcheti_Zakazi">
+      <End Role="Zakazi" EntitySet="Zakazi" />
+      <End Role="Otcheti" EntitySet="Otcheti" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zakazi_Sotrudniki" Association="Self.FK_Zakazi_Sotrudniki">
+      <End Role="Sotrudniki" EntitySet="Sotrudniki" />
+      <End Role="Zakazi" EntitySet="Zakazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zakazi_Tarifi" Association="Self.FK_Zakazi_Tarifi">
+      <End Role="Tarifi" EntitySet="Tarifi" />
+      <End Role="Zakazi" EntitySet="Zakazi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,88 @@
+﻿<Page x:Class="GruzChelb.Pages.Statistics"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GruzChelb.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="535" d:DesignWidth="970"
+      Title="Statistics">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="670*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="5"
+                CornerRadius="15" BorderThickness="3" BorderBrush="Black" Background="Cornsilk"/>
+        <Border Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" 
+                BorderBrush="Black" BorderThickness="0 3 0 3"/>
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" 
+                BorderBrush="Black" BorderThickness="0 3 0 3"/>
+        <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Margin="0 1 0 1"
+                BorderBrush="Black" BorderThickness="3 0 0 0"/>
+        
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" Text="Общая статистика компании" Style="{StaticResource blockAddHeader}"/>
+        
+        <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" Text="Данные по штату" Style="{StaticResource blockAdd}"/>
+        
+        <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" Text="Данные по заказам" Style="{StaticResource blockAdd}"/>
+        
+        <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" Text="Данные про прибыли" Style="{StaticResource blockAdd}"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Margin="75 0 0 0"
+                    VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBlock x:Name="txtBlockDataStateWorkers" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataStateClients" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataStateRates" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataStateProds" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="75 0 0 0"
+                    VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBlock x:Name="txtBlockDataOrdersExpect" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataOrdersPerform" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataOrdersMade" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataOrdersRefused" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="75 0 0 0"
+                    VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBlock x:Name="txtBlockDataMaximumProfit" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataProfitMonth" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDataPotProfit" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="txtBlockDatatTotalProfit" Style="{StaticResource blockAdd}"
+                       Margin="0 3 0 3" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</Page>

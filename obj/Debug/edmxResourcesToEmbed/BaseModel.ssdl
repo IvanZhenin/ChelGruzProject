@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ChelGruzModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clienti">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ThirdName" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Otcheti">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeZakaza" Type="int" Nullable="false" />
+    <Property Name="Information" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Sotrudniki">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ThirdName" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Doljnost" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Parol" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tarifi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="TypeAuto" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="PriceKm" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zakazi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeSotrudnika" Type="int" Nullable="false" />
+    <Property Name="CodeClienta" Type="int" Nullable="false" />
+    <Property Name="CodeTarifa" Type="int" Nullable="false" />
+    <Property Name="Tovar" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="KolvoTovara" Type="int" Nullable="false" />
+    <Property Name="AdressDostavki" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DistanceKm" Type="int" Nullable="false" />
+    <Property Name="DateAd" Type="date" />
+    <Property Name="DateKon" Type="date" />
+    <Property Name="Status" Type="nvarchar" MaxLength="15" />
+    <Property Name="ItogSum" Type="money" />
+  </EntityType>
+  <Association Name="FK_Otcheti_Zakazi">
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="1" />
+    <End Role="Otcheti" Type="Self.Otcheti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zakazi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Otcheti">
+        <PropertyRef Name="CodeZakaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zakazi_Clienti">
+    <End Role="Clienti" Type="Self.Clienti" Multiplicity="1" />
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clienti">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Zakazi">
+        <PropertyRef Name="CodeClienta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zakazi_Sotrudniki">
+    <End Role="Sotrudniki" Type="Self.Sotrudniki" Multiplicity="1" />
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudniki">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Zakazi">
+        <PropertyRef Name="CodeSotrudnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zakazi_Tarifi">
+    <End Role="Tarifi" Type="Self.Tarifi" Multiplicity="1" />
+    <End Role="Zakazi" Type="Self.Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tarifi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Zakazi">
+        <PropertyRef Name="CodeTarifa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ChelGruzModelContainer">
+    <EntitySet Name="Clienti" EntityType="Self.Clienti" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Otcheti" EntityType="Self.Otcheti" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sotrudniki" EntityType="Self.Sotrudniki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tarifi" EntityType="Self.Tarifi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zakazi" EntityType="Self.Zakazi" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Otcheti_Zakazi" Association="Self.FK_Otcheti_Zakazi">
+      <End Role="Zakazi" EntitySet="Zakazi" />
+      <End Role="Otcheti" EntitySet="Otcheti" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zakazi_Clienti" Association="Self.FK_Zakazi_Clienti">
+      <End Role="Clienti" EntitySet="Clienti" />
+      <End Role="Zakazi" EntitySet="Zakazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zakazi_Sotrudniki" Association="Self.FK_Zakazi_Sotrudniki">
+      <End Role="Sotrudniki" EntitySet="Sotrudniki" />
+      <End Role="Zakazi" EntitySet="Zakazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zakazi_Tarifi" Association="Self.FK_Zakazi_Tarifi">
+      <End Role="Tarifi" EntitySet="Tarifi" />
+      <End Role="Zakazi" EntitySet="Zakazi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

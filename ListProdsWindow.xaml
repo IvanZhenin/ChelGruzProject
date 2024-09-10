@@ -1,0 +1,52 @@
+﻿<Window x:Class="GruzChelb.ListProdsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GruzChelb"
+        mc:Ignorable="d"
+        Title="Состав заказа" Height="610" Width="1000" WindowStyle="None" 
+        ResizeMode="CanResize" WindowStartupLocation="CenterScreen"
+        MinHeight="610" MinWidth="1000" MaxHeight="810" MaxWidth="1200"
+        BorderBrush="Black" BorderThickness="4">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF2B4361" Offset="0.002"/>
+            <GradientStop Color="#FF959FAC" Offset="1"/>
+            <GradientStop Color="#FF3A82D7" Offset="0.2"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Window.Icon>
+        <BitmapImage UriSource="/Resources/prodsInOrder.png"/>
+    </Window.Icon>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="875*"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="470*"/>
+            <RowDefinition Height="65"/>
+        </Grid.RowDefinitions>
+        <Grid Name="toolBar" Background="Transparent" Grid.Row="0" 
+              Grid.Column="0" Grid.ColumnSpan="3" MouseDown="ToolBarMouseDown"/>
+        <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+            <Image Style="{StaticResource buttColl}" x:Name="collButton"
+                   Width="18" Height="18" MouseDown="CollButtonMouseDown"/>
+            <Image Style="{StaticResource buttClose}" x:Name="closeButton"
+                   Width="18" Height="18" MouseDown="CloseButtonMouseDown"/>
+        </StackPanel>
+
+        <Border Grid.Column="1" Grid.Row="0" Background="Cornsilk" Width="425"   
+                Height="55" HorizontalAlignment="Center" VerticalAlignment="Center"
+                BorderBrush="Black" BorderThickness="2" CornerRadius="15">
+            <TextBlock Name="txtNumOrder" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontFamily="Verdana" FontSize="24" FontWeight="Medium"/>
+        </Border>
+
+        <Frame NavigationUIVisibility="Hidden" Name="prodListFrame" 
+               Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

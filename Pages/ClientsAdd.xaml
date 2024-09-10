@@ -1,0 +1,81 @@
+﻿<Page x:Class="GruzChelb.Pages.ClientsAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GruzChelb.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="535" d:DesignWidth="970"
+      Title="ClientsAdd">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="340"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="95"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="7"
+                Background="Cornsilk" CornerRadius="15" BorderThickness="3" BorderBrush="Black"/>
+
+        <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="7" 
+                BorderThickness="0,0,3,0" BorderBrush="Black" Margin="0 1 0 1"/>
+        <Border Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="6" 
+                BorderThickness="0,3,0,3" BorderBrush="Black"/>
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="4" 
+                BorderThickness="0,3,0,3" BorderBrush="Black"/>
+        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                BorderThickness="0,3,0,3" BorderBrush="Black"/>
+        <Border Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"
+                BorderThickness="0,3,0,0" BorderBrush="Black"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Name="blockNamePage" Style="{StaticResource blockAddHeader}"/>
+
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="1"
+                   Grid.Column="0" Text="Имя"/>
+        <TextBox Style="{StaticResource textBoxAdd}" Grid.Row="1" Grid.Column="1" 
+                 x:Name="inputClientName" Text="{Binding Name}" MaxLength="25"
+                 PreviewTextInput="InputNamePreviewTextInput"/>
+
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="2" 
+                   Grid.Column="0" Text="Фамилия"/>
+        <TextBox Style="{StaticResource textBoxAdd}" Grid.Row="2" Grid.Column="1" 
+                 x:Name="inputClientSecondName" Text="{Binding SecondName}" MaxLength="25"
+                 PreviewTextInput="InputNamePreviewTextInput"/>
+
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="3" 
+                   Grid.Column="0" Text="Отчество"/>
+        <TextBox Style="{StaticResource textBoxAdd}" Grid.Row="3" Grid.Column="1" 
+                 x:Name="inputClientThirdName" Text="{Binding ThirdName}" MaxLength="25"
+                 PreviewTextInput="InputNamePreviewTextInput"/>
+
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="4" 
+                   Grid.Column="0" Text="Телефон"/>
+        <TextBox Style="{StaticResource textBoxAdd}" Grid.Row="4" Grid.Column="1" 
+                 x:Name="inputTelephone" Text="{Binding Telephone}" MaxLength="15"
+                 ToolTip="Образец: 7-000-000-00-00, первая цифра обязательно 7"
+                 PreviewTextInput="InputMobilePreviewTextInput"/>
+        
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="5" 
+                   Grid.Column="0" Text="Адрес"/>
+        <TextBox Style="{StaticResource textBoxAdd}" Grid.Row="5" Grid.Column="1" 
+                 x:Name="inputAddress" Text="{Binding Address}" MaxLength="50"
+                 PreviewTextInput="InputAddressPreviewTextInput"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Vertical" 
+                    VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btnSave" Style="{StaticResource buttonTransTwo}" 
+                    Click="BtnSaveClick" Content="Сохранить" Margin="0,8,0,6"/>
+            <Button x:Name="btnBack" Style="{StaticResource buttonTransTwo}" 
+                    Click="BtnBackClick" Content="Отмена" Margin="0,0,0,8" />
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1127f17a1bb44a63964566fc40cb21ff" Name="Diagram1">
+        <EntityTypeShape EntityType="ChelGruzModel.Clients" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChelGruzModel.Orders" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChelGruzModel.ProdInOrders" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChelGruzModel.Products" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChelGruzModel.Rates" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChelGruzModel.Workers" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="ChelGruzModel.FK_Orders_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="ChelGruzModel.FK_Orders_Rates" ManuallyRouted="false" />
+        <AssociationConnector Association="ChelGruzModel.FK_Orders_Workers" ManuallyRouted="false" />
+        <AssociationConnector Association="ChelGruzModel.FK_ProdInOrders_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="ChelGruzModel.FK_ProdInOrders_Products" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,79 @@
+﻿<Page x:Class="GruzChelb.Pages.ProdsAddToOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GruzChelb.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="535" d:DesignWidth="875"
+      Title="ProdsAddToOrder">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="625*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="95"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="6" Margin="0 1 0 12"
+                Background="Cornsilk" CornerRadius="15" BorderThickness="3" BorderBrush="Black"/>
+
+        <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="5" 
+                BorderThickness="0,0,3,0" BorderBrush="Black" Margin="0 1 0 14"/>
+        <Border Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" 
+                BorderThickness="0,3,0,3" BorderBrush="Black"/>
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1" 
+                BorderThickness="0,3,0,3" BorderBrush="Black"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Name="blockNamePage" Style="{StaticResource blockAddHeader}"/>
+
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="1"
+                   Grid.Column="0" Text="Код заказа"/>
+
+        <Border Grid.Row="1" Grid.Column="1" Width="400" Height="30" 
+                BorderBrush="Black" BorderThickness="2">
+            <TextBlock x:Name="inputOrderNum" Width="400" Height="30"
+                       Text="{Binding Orders.Id}" Background="White"
+                       Style="{StaticResource blockAuto}"/>
+        </Border>
+        
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="2"
+                   Grid.Column="0" Text="Название товара"/>
+        
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ComboBox Style="{StaticResource comboBoxAdd}" x:Name="choseProdId"
+                      IsVisibleChanged="choseProdIdIsVisibleChanged"
+                      SelectedItem="{Binding Products}" DisplayMemberPath="Name"/>
+
+            <Border Grid.Row="2" Grid.Column="1" Width="400" Height="30" 
+                    BorderBrush="Black" BorderThickness="2"
+                    Name="borderInputProdPos">
+                <TextBlock x:Name="inputProdNum" Text="{Binding Products.Id}"
+                           IsVisibleChanged="inputProdNumIsVisibleChanged"
+                           Background="White" Width="400" Height="30" 
+                           Style="{StaticResource blockAuto}"/>
+            </Border>
+        </StackPanel>
+       
+        <TextBlock Style="{StaticResource blockAdd}" Grid.Row="3"
+                   Grid.Column="0" Text="Количество"/>
+        <TextBox Style="{StaticResource textBoxAdd}" Grid.Row="3" Grid.Column="1"  
+                 x:Name="inputQuantity" Text="{Binding Quantity}" MaxLength="3"
+                 PreviewTextInput="InputQuantityPreviewTextInput"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Vertical" Grid.RowSpan="2"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10">
+            <Button x:Name="btnSave" Style="{StaticResource buttonTransTwo}" 
+                    Click="BtnSaveClick" Content="Сохранить" Margin="0 0 0 6"/>
+            <Button x:Name="btnBack" Style="{StaticResource buttonTransTwo}" 
+                    Click="BtnBackClick" Content="Отмена" />
+        </StackPanel>
+    </Grid>
+</Page>

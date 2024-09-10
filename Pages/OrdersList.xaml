@@ -1,0 +1,187 @@
+﻿<Page x:Class="GruzChelb.OrdersList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GruzChelb"
+      mc:Ignorable="d" 
+      d:DesignHeight="535" d:DesignWidth="970"
+      Title="OrdersList" IsVisibleChanged="PageIsVisibleChanged">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="940*"/>
+            <ColumnDefinition Width="4"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="430*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="Cornsilk" 
+                BorderBrush="Black" BorderThickness="3,3,3,0" CornerRadius="15 15 0 0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" Margin="0 2 0 5">
+                <TextBlock Text="Номер заказа:" Style="{StaticResource blockShow}"/>
+                <TextBox Name="txtBoxSrchOrders" TextChanged="TxtBoxTargetTextChanged" Margin="1 0 0 0"
+                         Width="120" Height="25" FontFamily="Verdana" FontSize="16" FontWeight="Medium"
+                         PreviewTextInput="TxtBoxSrchOrdersPreviewTextInput" MaxLength="25"/>
+
+                <TextBlock Text=" Тариф:" Style="{StaticResource blockShow}"/>
+                <ComboBox Name="cmbBoxSrchRates" SelectionChanged="CmbBoxSrchRatesSelectionChanged"
+                          Margin="1 0 0 0" Width="240" Height="25"/>
+
+                <TextBlock Text=" Статус:" Style="{StaticResource blockShow}"/>
+                <ComboBox Name="cmbBoxSrchStatus" SelectionChanged="CmbBoxSrchStatusSelectionChanged"
+                          Margin="1 0 0 0" Width="150" Height="25"/>
+
+                <Border Margin="15 0 0 0" BorderBrush="Black" BorderThickness="1.5" CornerRadius="3">
+                    <Button Background="Gold" Click="BtnGoMainPageClick" ToolTip="Вернуться на главную">
+                        <Button.Content>
+                            <Image Source="/Resources/btnback.png" Width="32" Height="30"/>
+                        </Button.Content>
+                    </Button>
+                </Border>
+            </StackPanel>
+        </Border>
+
+        <Border Background="Cornsilk" BorderBrush="Black" BorderThickness="3" Grid.Row="1" 
+                Grid.Column="0" Grid.ColumnSpan="3"/>
+        <ListView Name="listViewOrders" Background="Transparent" HorizontalContentAlignment="Center"
+                  Grid.Row="1" Grid.Column="1" Margin="0 2 0 3" BorderThickness="0"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Border Name="Border" CornerRadius="20" Width="700" Height="375" 
+                             HorizontalAlignment="Center" Margin="5">
+                                    <ContentPresenter/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="LightSkyBlue"/>
+                                        <Setter TargetName="Border" Property="CornerRadius" Value="20"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="LightBlue"/>
+                                        <Setter TargetName="Border" Property="CornerRadius" Value="20"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="3" CornerRadius="20" 
+                            Width="700" Height="375" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Vertical">
+                            <Border BorderBrush="Black" BorderThickness="3 0 3 3" Width="350">
+                                <TextBlock Text="{Binding Id, StringFormat={}Заказ номер {0}}" 
+                                           VerticalAlignment="Center" TextAlignment="Center" Width="200"
+                                           FontFamily="Verdana" FontWeight="Medium" FontSize="18"/>
+                            </Border>
+
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 4 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Workers.SecondName, StringFormat='{}Сотрудник: {0}'}" 
+                                               Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="{Binding Workers.Name, StringFormat={} {0}}" 
+                                               Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="{Binding Workers.ThirdName, StringFormat={} {0}}" 
+                                               Style="{StaticResource blockShow}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 0 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Clients.SecondName, StringFormat='{}Клиент: {0}'}" 
+                                               Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="{Binding Clients.Name, StringFormat={} {0}}" 
+                                               Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="{Binding Clients.ThirdName, StringFormat={} {0}}" 
+                                               Style="{StaticResource blockShow}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 0 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Clients.Telephone, StringFormat='{}Телефон клиента: {0}'}" 
+                                               Style="{StaticResource blockShow}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 0 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Rates.Name, StringFormat='{}Тариф: {0}'}" 
+                                               Style="{StaticResource blockShow}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 0 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding AddressDelivery, StringFormat='{}Адрес доставки: {0}'}" 
+                                               Style="{StaticResource blockShow}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 4 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Итого: " Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="{Binding TotalAmount, StringFormat='{}{0:0} руб.'}" 
+                                               Style="{StaticResource blockShow}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 4 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Дата начала: " Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="{Binding DateStart, StringFormat={}{0:dd.MM.yyyy}}" 
+                                               Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="Дата конца: " Style="{StaticResource blockShow}" Margin="15 0 0 0"/>
+                                    <TextBlock Text="{Binding DateEnd, StringFormat={}{0:dd.MM.yyyy}}" 
+                                               Style="{StaticResource blockShow}" TextAlignment="Left"/>
+                                </StackPanel>
+                            </Border>
+                            
+                            <Border Width="650" BorderBrush="Black" BorderThickness="0 0 0 2" Margin="0 4 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Статус заказа:" Style="{StaticResource blockShow}"/>
+                                    <TextBlock Text="{Binding Status, StringFormat={} {0}}" 
+                                               Style="{StaticResource blockShow}"/>
+                                </StackPanel>
+                            </Border>
+                            
+                            <Border Width="650" BorderBrush="Black" Margin="0 4 0 8">
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Состав заказа" Click="BtnProdListClick" 
+                                                Margin="5 0 0 0" Style="{StaticResource buttonTransTwo}"/>
+                                    <Button Content="Изменить" Click="BtnRedClick" 
+                                                Margin="145 0 0 0" Style="{StaticResource buttonTransTwo}"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Background="Cornsilk" 
+                BorderBrush="Black" BorderThickness="3,0,3,3" CornerRadius="0 0 15 15"/>
+        <Button x:Name="btnAdd" Click="BtnAddClick" Content="Добавить" Grid.Row="2" Grid.Column="0" 
+                Grid.ColumnSpan="3" Style="{StaticResource buttonTransTwo}" 
+                HorizontalAlignment="Left" Margin="15 0 0 0"/>
+        <Button x:Name="btnDel" Click="BtnDelClick" Content="Удалить" Grid.Row="2" Grid.Column="0" 
+                Grid.ColumnSpan="3" Style="{StaticResource buttonTransTwo}" 
+                HorizontalAlignment="Right" Margin="0 0 15 0"/>        
+    </Grid>
+</Page>

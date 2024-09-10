@@ -1,0 +1,53 @@
+﻿<Window x:Class="GruzChelb.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GruzChelb"
+        mc:Ignorable="d"
+         Title="Окно входа" Height="435" Width="350" WindowStyle="None" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF2B4361" Offset="0.002"/>
+            <GradientStop Color="#FF959FAC" Offset="1"/>
+            <GradientStop Color="#FF3A82D7" Offset="0.2"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Window.Icon>
+        <BitmapImage UriSource="/Resources/userCheck.png"/>
+    </Window.Icon>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="295"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid Name="toolBar" Background="LightSkyBlue" Grid.Row="0" MouseDown="ToolBarMouseDown"/>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Image Style="{StaticResource buttColl}" x:Name="collButton" 
+                   Height="17" Width="17" MouseDown="CollButtonMouseDown"/>
+            
+            <Image Style="{StaticResource buttClose}" x:Name="closeButton" 
+                   Height="17" Width="17" MouseDown="CloseButtonMouseDown"/>
+        </StackPanel>
+
+        <StackPanel Name="topBar" Background="Transparent" Grid.Row="1" Orientation="Horizontal" Margin="10 0 10 0">
+            <Image x:Name="topLogo" Source="/Resources/logo.png" 
+                   Width="80" Height="80" HorizontalAlignment="Center"/>
+
+            <Border Background="Cornsilk"  Width="220" Height="35" Margin="10 0 0 0" BorderThickness="3"
+                    BorderBrush="Black" CornerRadius="15">
+                <TextBlock Text="Челябинск-Груз" TextAlignment="Center" VerticalAlignment="Center"
+                           FontFamily="TimesNewRoman" FontWeight="DemiBold" FontSize="18"/>
+            </Border>
+        </StackPanel>
+        
+        <Frame NavigationUIVisibility="Hidden" Name="mainFrame" Grid.Row="2"/>
+    </Grid>
+</Window>

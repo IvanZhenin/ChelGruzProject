@@ -1,0 +1,229 @@
+D:\bin\student\Zenin\GruzChelb\obj\Debug\MainWindow.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\App.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb_Content.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.cache
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.lref
+D:\bin\student\Zenin\GruzChelb\bin\Debug\GruzChelb.exe.config
+D:\bin\student\Zenin\GruzChelb\bin\Debug\GruzChelb.exe
+D:\bin\student\Zenin\GruzChelb\bin\Debug\GruzChelb.pdb
+D:\bin\student\Zenin\GruzChelb\bin\Debug\EntityFramework.dll
+D:\bin\student\Zenin\GruzChelb\bin\Debug\EntityFramework.SqlServer.dll
+D:\bin\student\Zenin\GruzChelb\bin\Debug\EntityFramework.xml
+D:\bin\student\Zenin\GruzChelb\bin\Debug\EntityFramework.SqlServer.xml
+D:\bin\student\Zenin\GruzChelb\bin\Debug\ru\EntityFramework.resources.dll
+D:\bin\student\Zenin\GruzChelb\obj\Debug\App.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\MainWindow.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.g.resources
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.Properties.Resources.resources
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.csproj.GenerateResource.cache
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.csproj.CoreCompileInputs.cache
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.csproj.CopyComplete
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.exe
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.pdb
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\GruzChelb.exe
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\EntityFramework.dll
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\EntityFramework.SqlServer.dll
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\ru\EntityFramework.resources.dll
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\GruzChelb.exe.config
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\GruzChelb.pdb
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\EntityFramework.xml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\bin\Debug\EntityFramework.SqlServer.xml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.csproj.AssemblyReference.cache
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\ListProdsWindow.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\Autorisation.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\MainWindow.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\MenuWindow.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\OrdersAdd.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\OrdersList.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProdsListInOrder.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\App.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb_Content.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.cache
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.lref
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\App.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\ListProdsWindow.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\Autorisation.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\MainWindow.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\MenuWindow.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\OrdersAdd.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\OrdersList.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProdsListInOrder.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.g.resources
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.Properties.Resources.resources
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.csproj.GenerateResource.cache
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.csproj.CoreCompileInputs.cache
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.exe
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.pdb
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\Statistics.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\Statistics.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\WorkersAdd.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\WorkersList.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\WorkersAdd.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\WorkersList.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ClientsAdd.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ClientsList.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ClientsAdd.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ClientsList.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\RatesAdd.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\RatesList.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\RatesAdd.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\RatesList.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\ListProdsWindow.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\Autorisation.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\MenuWindow.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ClientsAdd.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ClientsList.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\OrdersAdd.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\OrdersList.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProdsListInOrder.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProductsAdd.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProductsList.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\RatesAdd.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\RatesList.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\Statistics.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\WorkersAdd.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\WorkersList.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\ListProdsWindow.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\Autorisation.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\MenuWindow.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ClientsAdd.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ClientsList.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\OrdersAdd.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\OrdersList.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProdsListInOrder.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProductsAdd.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\ProductsList.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\RatesAdd.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\RatesList.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\Statistics.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\WorkersAdd.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\WorkersList.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProductsAdd.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProductsList.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProductsAdd.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\ProductsList.baml
+D:\bin\student\Женин\GruzChelb\bin\Debug\GruzChelb.exe.config
+D:\bin\student\Женин\GruzChelb\bin\Debug\GruzChelb.exe
+D:\bin\student\Женин\GruzChelb\bin\Debug\GruzChelb.pdb
+D:\bin\student\Женин\GruzChelb\bin\Debug\EntityFramework.dll
+D:\bin\student\Женин\GruzChelb\bin\Debug\EntityFramework.SqlServer.dll
+D:\bin\student\Женин\GruzChelb\bin\Debug\EntityFramework.xml
+D:\bin\student\Женин\GruzChelb\bin\Debug\EntityFramework.SqlServer.xml
+D:\bin\student\Женин\GruzChelb\bin\Debug\ru\EntityFramework.resources.dll
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.csprojAssemblyReference.cache
+D:\bin\student\Женин\GruzChelb\obj\Debug\ListProdsWindow.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\Autorisation.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\MainWindow.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\MenuWindow.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ClientsAdd.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ClientsList.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\OrdersAdd.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\OrdersList.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProdsListInOrder.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProductsAdd.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProductsList.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\RatesAdd.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\RatesList.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\Statistics.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\WorkersAdd.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\WorkersList.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\App.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb_Content.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.cache
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.lref
+D:\bin\student\Женин\GruzChelb\obj\Debug\App.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\ListProdsWindow.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\Autorisation.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\MainWindow.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\MenuWindow.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ClientsAdd.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ClientsList.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\OrdersAdd.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\OrdersList.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProdsListInOrder.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProductsAdd.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\ProductsList.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\RatesAdd.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\RatesList.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\Statistics.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\WorkersAdd.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\WorkersList.baml
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.g.resources
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.Properties.Resources.resources
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.csproj.GenerateResource.cache
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.csproj.CoreCompileInputs.cache
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.csproj.CopyComplete
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.exe
+D:\bin\student\Женин\GruzChelb\obj\Debug\GruzChelb.pdb
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\WorkersListDev.g.cs
+D:\bin\student\Женин\GruzChelb\obj\Debug\Pages\WorkersListDev.baml
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\WorkersListDev.g.cs
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\Pages\WorkersListDev.baml
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.csproj.AssemblyReference.cache
+D:\bin\student\Zenin\GruzChelb\obj\Debug\GruzChelb.csproj.SuggestedBindingRedirects.cache
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\WorkersListDev.g.cs
+D:\bin\student\Zenin\GruzChelb\obj\Debug\Pages\WorkersListDev.baml
+D:\bin\student\GruzChelb\bin\Debug\GruzChelb.exe.config
+D:\bin\student\GruzChelb\bin\Debug\GruzChelb.exe
+D:\bin\student\GruzChelb\bin\Debug\GruzChelb.pdb
+D:\bin\student\GruzChelb\bin\Debug\EntityFramework.dll
+D:\bin\student\GruzChelb\bin\Debug\EntityFramework.SqlServer.dll
+D:\bin\student\GruzChelb\bin\Debug\EntityFramework.xml
+D:\bin\student\GruzChelb\bin\Debug\EntityFramework.SqlServer.xml
+D:\bin\student\GruzChelb\bin\Debug\ru\EntityFramework.resources.dll
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.csprojAssemblyReference.cache
+D:\bin\student\GruzChelb\obj\Debug\ListProdsWindow.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\Autorisation.g.cs
+D:\bin\student\GruzChelb\obj\Debug\MainWindow.g.cs
+D:\bin\student\GruzChelb\obj\Debug\MenuWindow.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\ClientsAdd.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\ClientsList.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\OrdersAdd.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\OrdersList.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProdsListInOrder.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProductsAdd.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProductsList.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\RatesAdd.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\RatesList.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\Statistics.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\WorkersAdd.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\WorkersList.g.cs
+D:\bin\student\GruzChelb\obj\Debug\Pages\WorkersListDev.g.cs
+D:\bin\student\GruzChelb\obj\Debug\App.g.cs
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb_Content.g.cs
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.cache
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb_MarkupCompile.lref
+D:\bin\student\GruzChelb\obj\Debug\App.baml
+D:\bin\student\GruzChelb\obj\Debug\ListProdsWindow.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\Autorisation.baml
+D:\bin\student\GruzChelb\obj\Debug\MainWindow.baml
+D:\bin\student\GruzChelb\obj\Debug\MenuWindow.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\ClientsAdd.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\ClientsList.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\OrdersAdd.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\OrdersList.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProdsAddToOrder.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProdsListInOrder.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProductsAdd.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\ProductsList.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\RatesAdd.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\RatesList.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\Statistics.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\WorkersAdd.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\WorkersList.baml
+D:\bin\student\GruzChelb\obj\Debug\Pages\WorkersListDev.baml
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.g.resources
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.Properties.Resources.resources
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.csproj.GenerateResource.cache
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.csproj.CoreCompileInputs.cache
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.csproj.CopyComplete
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.exe
+D:\bin\student\GruzChelb\obj\Debug\GruzChelb.pdb
+D:\Program Files (x86)\Cpp Projects\GruzChelb\obj\Debug\GruzChelb.csproj.Up2Date
